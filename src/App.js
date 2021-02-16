@@ -1,62 +1,29 @@
 import "./App.css";
+import { products } from "./products";
+import { styles } from "./style";
 
 function App() {
+  const productList = products.map((product) => {
+    return (
+      <div style={styles.productContainer}>
+        <img src={product.image} width={200} height={200} />
+        <text style={styles.productName}>{product.name}</text>
+        <text>{product.price}</text>
+      </div>
+    );
+  });
   return (
     <>
-      <text
-        style={{
-          fontSize: 48,
-          fontWeight: "bold",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        SNAPZO
-      </text>
-      <text
-        style={{
-          fontSize: 28,
-          fontWeight: "bold",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        ITS A PHOTOGRAPHER APP
-      </text>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          marginTop: "10px",
-        }}
-      >
+      <text style={styles.title}>SNAPZO</text>
+      <text style={styles.tagLine}>ALL YOU NEED FOR PHOTOGRAPHY</text>
+      <div style={styles.imageContainer}>
         <img
-          src="https://clipground.com/images/camera-lens-logo-design-clipart-2.png"
+          src="http://clipartmag.com/images/camera-logo-png-21.png"
           height={500}
-          width={1000}
+          width={500}
         ></img>
-
-        {/* <header className="App-header">
-        <a className="App-link" rel="noopener noreferrer">
-          SNAPZO
-        </a>
-        <a>
-          <p>Ann photographer app!</p>
-        </a>
-
-        <img src={logo} className="App-logo" alt="logo" />
-        {data.map(({ name, price, image }) => (
-          <>
-            <img className={name} src={image} alt="logo"></img>
-            <p>{name}</p>
-            <p>{price}</p>
-          </>
-        ))}
-      </header> */}
       </div>
+      <div style={styles.productList}>{productList}</div>
     </>
   );
 }
