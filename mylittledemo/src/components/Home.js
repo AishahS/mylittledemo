@@ -1,18 +1,18 @@
-import { styles } from "../style.js";
+import { Title, Description, ShopImage, ImageContainer } from "../style.js";
 
 const Home = () => {
   return (
-    <div>
-      <text style={styles.title}>SNAPZO</text>
-      <text style={styles.tagLine}>Ann photographer app</text>
-      <div style={styles.imageContainer}>
-        <img
+    <>
+      <Title>SNAPZO</Title>
+      <Description>Ann photographer app</Description>
+      <ImageContainer>
+        <ShopImage
           src="https://iso.500px.com/wp-content/uploads/2016/03/pedroquintela-1500x844.jpg"
-          height={500}
           width={1000}
-        ></img>
-      </div>
-    </div>
+          height={500}
+        ></ShopImage>
+      </ImageContainer>
+    </>
   );
 };
 

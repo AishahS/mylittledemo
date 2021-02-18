@@ -1,4 +1,3 @@
-import { styles } from "../style.js";
 import { products } from "../products";
 import ProductItem from "./productItem";
 

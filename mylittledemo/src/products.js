@@ -10,7 +10,6 @@ export const products = [
     name: "Tripod Stand",
     id: "2",
     price: "85KD",
-    image:
-      "https://www.noelleeming.co.nz/shop/content/images/products/150/150816.jpg",
+    image: "http://pngimg.com/uploads/tripod/tripod_PNG80.png",
   },
 ];

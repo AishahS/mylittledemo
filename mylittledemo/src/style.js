@@ -1,40 +1,65 @@
-export const styles = {
-  productContainer: {
-    display: "flex",
-    flexDirection: "column",
-    width: 200,
-    height: 250,
-    margin: 20,
-    alignItems: "center",
-  },
-  productName: {
-    fontWeight: "bold",
-    paddingTop: 5,
-    paddingBottom: 5,
-  },
-  title: {
-    fontSize: 48,
-    fontWeight: "bold",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  tagLine: {
-    fontSize: 28,
-    fontWeight: "bold",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  imageContainer: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "10px",
-  },
-  productList: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-  },
-};
+import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    color: ${(props) => props.theme.main};
+    background-color: ${(props) => props.theme.background};
+  }
+  .p {
+  font-weight: bold;
+  padding-top: 5;
+  padding-bottom: 5;
+}
+
+.product-price {
+  color:${(props) => props.theme.titleColor};
+}
+`;
+
+export const Title = styled.h1`
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Description = styled.h4`
+  font-size: 48;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ShopImage = styled.img`
+  margin-top: 10px;
+`;
+
+export const ListWrapper = styled.div`
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const productName = styled.div`
+  font-weight: bold;
+  padding-top: 5;
+  padding-bottom: 5;
+`;
+
+export const ProductWrapper = styled.div`
+  margin: 20;
+  display: flex;
+  flex-direction: column;
+  width: 200;
+  height: 250;
+  align-items: center;
+`;
